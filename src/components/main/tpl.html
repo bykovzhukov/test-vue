@@ -1,0 +1,15 @@
+<main class="main">
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1 class="jumbotron-heading">Album example</h1>
+      <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
+    </div>
+  </section>
+  <tiny-slider :mouse-drag="true" :loop="false" :controls="false" :responsive="slider.responsive" class="slider">
+    <div v-for="slide in slider.slides" class="slider__item">
+      <a :href="slide.link" class="slider__link" target="_blank"></a>
+      <div :style="{ backgroundImage: 'url(' + slide.img + ')' }" class="slider__img"></div>
+    </div>
+  </tiny-slider>
+  <div style="height: 100vh;"></div>
+</main>
